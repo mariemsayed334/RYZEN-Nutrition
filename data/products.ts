@@ -56,7 +56,7 @@ export const products: Product[] = [
       {
         id: 'f2-1',
         name: 'CHOCOLATE CHEESECAKE',
-        image: '/images/whey.png',
+        image: '/images/Whey.png',
       },
       {
         id: 'f2-2',
@@ -134,7 +134,7 @@ export const products: Product[] = [
       {
         id: 'f5-2',
         name: 'CHOCOLATE MILKSHAKE', 
-        image: '/images/Whey complex 2.jpg',
+        image: '/images/Whey complex 2.png',
       },
     ],
     keyBenefits: ['Highest quality multi-source whey protein with more than 24g of protein per serving.', ' Naturally high in BCAAs and glutamine for enhanced recovery.', 'Combines fast, medium, and slow-digesting proteins for sustained muscle nourishment.', 'Contains a digestive enzyme blend for better absorption and digestion.'],
@@ -204,12 +204,12 @@ export const products: Product[] = [
       {
         id: 'f8-1',
         name: 'COLA',
-        image: '/images/Pre Workout1.png',
+        image: '/images/pre workout1.png',
       },
       {
         id: 'f8-2',
         name: 'ICY BLUE RASPBERRY',
-        image: '/images/Pre Workout 2.png',
+        image: '/images/pre workout 2.png',
       },
     ],
     keyBenefits: ['Boosts energy and mental focus with 200mg of natural caffeine per serving.',  'Citrulline and arginine nitrate support nitric oxide production and muscle pumps.', 'Designed for athletes who demand extreme energy, focus, and performance.',],
@@ -292,7 +292,7 @@ export const products: Product[] = [
       {
         id: 'f12-1',
         name: 'ICY BLUE RASPBERRY',
-        image: '/images/l-carnitine.png',
+        image: '/images/l- carnitine.png',
       },
     ],
    keyBenefits: ['Supports fat burning by transporting fatty acids into cells for energy production.', ' L-Carnitine L-Tartrate is the optimal form of L-Carnitine with superior absorption and antioxidant benefits.', 'Vitamins and Chromium support normal energy-yielding metabolism.', 'Improves performance and endurance during exercise.'],
