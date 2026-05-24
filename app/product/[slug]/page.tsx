@@ -44,12 +44,12 @@ export default function ProductPage() {
           {/* Images */}
           <div>
             <div className="sticky top-32">
-              <div className="bg-gradient-to-br from-muted to-muted/50 rounded-3xl overflow-hidden mb-6 aspect-square flex items-center justify-center border border-border">
+              <div className="bg-gradient-to-br from-muted to-muted/50 rounded-3xl overflow-hidden mb-6 aspect-square flex items-center justify-center border border-border p-4">
                 {selectedFlavor?.image && (
                   <img
                     src={selectedFlavor.image}
                     alt={selectedFlavor.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105"
                   />
                 )}
               </div>
@@ -162,7 +162,7 @@ export default function ProductPage() {
                       <img
                         src={relatedProduct.flavors[0].image}
                         alt={relatedProduct.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     )}
                   </div>
