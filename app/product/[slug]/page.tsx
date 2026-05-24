@@ -2,7 +2,7 @@
 
 import { products } from '@/data/products';
 import Link from 'next/link';
-import { ArrowLeft, ShoppingCart, Check, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Check, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import { slugify } from '@/lib/utils';
@@ -14,8 +14,6 @@ export default function ProductPage() {
   
   const product = products.find((p) => slugify(p.slug) === slugify(slug));
   const [selectedFlavor, setSelectedFlavor] = useState(product?.flavors[0]);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdded, setIsAdded] = useState(false);
 
   if (!product) {
     return (
@@ -29,11 +27,6 @@ export default function ProductPage() {
       </div>
     );
   }
-
-  const handleAddToCart = () => {
-    setIsAdded(true);
-    setTimeout(() => setIsAdded(false), 2000);
-  };
 
   return (
     <div className="bg-background min-h-screen pt-28">
@@ -115,38 +108,11 @@ export default function ProductPage() {
               </div>
             )}
 
-            {/* Quantity and Add to Cart */}
+            {/* Product Options */}
             <div className="bg-muted/30 rounded-2xl p-8 mb-10 border border-border">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-muted-foreground font-semibold">Quantity:</span>
-                <div className="flex items-center border border-border rounded-lg">
-                  <button
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="px-4 py-2 hover:bg-muted transition-colors"
-                  >
-                    −
-                  </button>
-                  <span className="px-6 py-2 font-bold text-foreground">{quantity}</span>
-                  <button
-                    onClick={() => setQuantity(quantity + 1)}
-                    className="px-4 py-2 hover:bg-muted transition-colors"
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-
-              <button
-                onClick={handleAddToCart}
-                className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-lg font-bold uppercase tracking-wider transition-all duration-300 text-base ${
-                  isAdded
-                    ? 'bg-green-500 text-white'
-                    : 'bg-primary hover:bg-accent text-primary-foreground hover:shadow-lg hover:shadow-primary/50'
-                }`}
-              >
-                <ShoppingCart className="w-5 h-5" />
-                {isAdded ? 'Added to Cart!' : 'Add to Cart'}
-              </button>
+              <p className="text-muted-foreground leading-relaxed">
+                Select a flavor and review the product details. Use the buttons on this page to explore the product and see related items.
+              </p>
             </div>
 
             {/* How to Use */}

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingCart, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Product } from '@/data/products';
 import { slugify } from '@/lib/utils';
 import { useState } from 'react';
@@ -11,13 +11,6 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const [isAdded, setIsAdded] = useState(false);
-
-  const handleAddToCart = () => {
-    setIsAdded(true);
-    setTimeout(() => setIsAdded(false), 2000);
-  };
-
   return (
     <div className="group relative bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-500 h-full flex flex-col shadow-lg hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-3">
       <Link
@@ -87,22 +80,8 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
 
-        {/* Button */}
+        {/* Actions */}
         <div className="flex items-center gap-2 mt-auto pt-4 border-t border-border/50">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              handleAddToCart();
-            }}
-            className={`relative z-50 flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-black text-sm uppercase tracking-wider transition-all duration-300 ${
-              isAdded
-                ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/50'
-                : 'bg-gradient-to-r from-primary to-secondary hover:from-primary hover:to-secondary hover:shadow-lg hover:shadow-primary/50 text-primary-foreground'
-            }`}
-          >
-            <ShoppingCart className="w-4 h-4" />
-            {isAdded ? 'Added!' : 'Add'}
-          </button>
           <button className="relative z-50 p-3 rounded-lg border border-border hover:border-secondary hover:bg-secondary/10 transition-all duration-300 group/heart">
             <Star className="w-4 h-4 text-muted-foreground group-hover/heart:text-secondary group-hover/heart:scale-125 transition-all" />
           </button>

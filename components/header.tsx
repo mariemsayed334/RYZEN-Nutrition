@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, ShoppingCart, Zap } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,14 +43,6 @@ export function Header() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-4">
-            <Link
-              href="/checkout"
-              className="hidden sm:flex items-center justify-center gap-2 bg-primary hover:bg-accent text-primary-foreground px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
-            >
-              <ShoppingCart className="w-4 h-4" />
-              Cart
-            </Link>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -79,14 +71,6 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/checkout"
-                className="px-4 py-2 bg-primary hover:bg-accent text-primary-foreground rounded-lg font-bold text-sm uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <ShoppingCart className="w-4 h-4" />
-                Cart
-              </Link>
             </nav>
           </div>
         )}
