@@ -1,7 +1,7 @@
 'use client';
 
 import { ProductCard } from '@/components/product-card';
-import { products } from '@/data/products';
+import { products, categories as productCategories } from '@/data/products';
 import { slugify } from '@/lib/utils';
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
@@ -12,11 +12,7 @@ export default function ShopPage() {
 
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'protein', name: 'Protein' },
-    { id: 'amino-acids', name: 'Amino Acids' },
-    { id: 'carbohydrates', name: 'Carbohydrates' },
-    { id: 'energy-burn', name: 'Energy & Burn' },
-    { id: 'vitamins', name: 'Vitamins' },
+    ...productCategories.map((category) => ({ id: category.id, name: category.name })),
   ];
 
   const filteredProducts = products.filter((product) => {

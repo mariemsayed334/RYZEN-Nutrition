@@ -123,7 +123,7 @@ export const products: Product[] = [
     id: '5',
     slug: 'Whey Protein Complex',
     name: 'Whey Protein Complex',
-    category: 'protein',
+    category: 'Protein',
     description: 'RYZEN Nutrition Whey Protein Complex – Multi-Source Protein Blend. Available in Chocolate Milkshake and Banana Smoothie flavors. Each serving (30g / 1 scoop) delivers 24g of protein. Net weight: 2kg, 66 servings.',
     flavors: [
       {
