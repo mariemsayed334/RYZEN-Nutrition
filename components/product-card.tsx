@@ -22,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <Link
         href={`/product/${encodeURIComponent(product.slug)}`}
         aria-label={`View ${product.name}`}
-        className="absolute inset-0 z-10"
+        className="absolute inset-0 z-40"
       />
 
       {/* Gradient Border Overlay */}
@@ -93,7 +93,7 @@ export function ProductCard({ product }: ProductCardProps) {
               e.preventDefault();
               handleAddToCart();
             }}
-            className={`relative z-20 flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-black text-sm uppercase tracking-wider transition-all duration-300 ${
+            className={`relative z-50 flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-black text-sm uppercase tracking-wider transition-all duration-300 ${
               isAdded
                 ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/50'
                 : 'bg-gradient-to-r from-primary to-secondary hover:from-primary hover:to-secondary hover:shadow-lg hover:shadow-primary/50 text-primary-foreground'
@@ -102,7 +102,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <ShoppingCart className="w-4 h-4" />
             {isAdded ? 'Added!' : 'Add'}
           </button>
-          <button className="relative z-20 p-3 rounded-lg border border-border hover:border-secondary hover:bg-secondary/10 transition-all duration-300 group/heart">
+          <button className="relative z-50 p-3 rounded-lg border border-border hover:border-secondary hover:bg-secondary/10 transition-all duration-300 group/heart">
             <Star className="w-4 h-4 text-muted-foreground group-hover/heart:text-secondary group-hover/heart:scale-125 transition-all" />
           </button>
         </div>
