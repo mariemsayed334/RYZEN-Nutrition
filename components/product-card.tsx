@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ShoppingCart, Star } from 'lucide-react';
 import { Product } from '@/data/products';
+import { slugify } from '@/lib/utils';
 import { useState } from 'react';
 
 interface ProductCardProps {
@@ -20,7 +21,7 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group relative bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-500 h-full flex flex-col shadow-lg hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-3">
       <Link
-        href={`/product/${encodeURIComponent(product.slug)}`}
+        href={`/product/${slugify(product.slug)}`}
         aria-label={`View ${product.name}`}
         className="absolute inset-0 z-40"
       />

@@ -5,12 +5,14 @@ import Link from 'next/link';
 import { ArrowLeft, ShoppingCart, Check, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
+import { slugify } from '@/lib/utils';
 
 export default function ProductPage() {
   const params = useParams();
-  const slug = params.slug as string;
+  const rawSlug = params.slug as string;
+  const slug = decodeURIComponent(rawSlug);
   
-  const product = products.find((p) => p.slug === slug);
+  const product = products.find((p) => slugify(p.slug) === slugify(slug));
   const [selectedFlavor, setSelectedFlavor] = useState(product?.flavors[0]);
   const [quantity, setQuantity] = useState(1);
   const [isAdded, setIsAdded] = useState(false);
@@ -186,7 +188,7 @@ export default function ProductPage() {
               .map((relatedProduct) => (
                 <Link
                   key={relatedProduct.id}
-                  href={`/product/${relatedProduct.slug}`}
+                  href={`/product/${slugify(relatedProduct.slug)}`}
                   className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 >
                   <div className="aspect-square bg-gradient-to-br from-muted to-muted/50 overflow-hidden">
