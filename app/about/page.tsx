@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
         <div className="mb-20">
-          <h1 className="text-6xl lg:text-7xl font-black text-foreground mb-6">About Evolab Nutrition</h1>
+          <h1 className="text-6xl lg:text-7xl font-black text-foreground mb-6">About Ryzen Nutrition</h1>
           <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
             We&apos;re not just a supplement company. We&apos;re a movement dedicated to pushing the boundaries of human
             performance through science-backed nutrition and relentless commitment to quality.
@@ -79,7 +79,7 @@ export default function AboutPage() {
           <h2 className="text-4xl font-black text-foreground mb-6">Our Story</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Founded by athletes, for athletes. We started Evolab Nutrition with a simple belief: champions deserve
+              Founded by athletes, for athletes. We started Ryzen Nutrition with a simple belief: champions deserve
               better supplements. While the industry was filled with marketing hype, we focused on what really matters —
               science, quality, and results.
             </p>

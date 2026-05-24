@@ -24,7 +24,7 @@ export function Header() {
               <Zap className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-black text-foreground hidden sm:inline">
-              <span className="text-primary">Evolab</span>
+              <span className="text-primary">Ryzen</span>
             </span>
           </Link>
 

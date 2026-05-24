@@ -43,7 +43,7 @@ export default function ContactPage() {
                 {
                   icon: Mail,
                   title: 'Email',
-                  value: 'support@evolab.com',
+                  value: 'support@ryzen.com',
                   description: 'We reply within 24 hours',
                 },
                 {

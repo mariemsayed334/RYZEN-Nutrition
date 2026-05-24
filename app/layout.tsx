@@ -9,7 +9,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Evolab Nutrition - Premium Supplements for Peak Performance',
+  title: 'Ryzen Nutrition - Premium Supplements for Peak Performance',
   description: 'Science-backed supplements engineered for champions. Premium nutrition for muscle growth, energy, and performance.',
   generator: 'v0.app',
   icons: {

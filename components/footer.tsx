@@ -55,15 +55,15 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl font-black mb-4">Evolab Nutrition</h3>
+            <h3 className="text-xl font-black mb-4">Ryzen Nutrition</h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Premium supplements for peak performance. Science-backed, quality-tested, results-driven.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:support@evolab.com" className="text-foreground hover:text-primary transition-colors">
-                  support@evolab.com
+                <a href="mailto:support@ryzen.com" className="text-foreground hover:text-primary transition-colors">
+                  support@ryzen.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -108,7 +108,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Copyright */}
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {currentYear} Evolab Nutrition. All rights reserved. Engineered for champions.
+            © {currentYear} Ryzen Nutrition. All rights reserved. Engineered for champions.
           </p>
 
           {/* Social */}
