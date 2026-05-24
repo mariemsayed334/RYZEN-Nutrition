@@ -7,7 +7,7 @@ import { ArrowRight, Zap, Flame, Activity, Target } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Home() {
-  const featuredProducts = products.filter(p => p.featured);
+  const featuredProducts = products.filter(p => p.featured).slice(0, 4);
 
   return (
     <div className="bg-background">

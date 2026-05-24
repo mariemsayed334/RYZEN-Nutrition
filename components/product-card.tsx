@@ -25,12 +25,12 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Image Container */}
-      <div className="relative h-80 bg-gradient-to-br from-muted/80 to-muted overflow-hidden">
+      <div className="relative min-h-[280px] h-72 sm:h-80 bg-gradient-to-br from-muted/80 to-muted overflow-hidden">
         {product.flavors[0]?.image && (
           <img
             src={product.flavors[0].image}
             alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 ease-out"
+            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
           />
         )}
         {product.featured && (

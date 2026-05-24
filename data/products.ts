@@ -141,6 +141,7 @@ export const products: Product[] = [
     ingredients: 'Protein Blend (Whey Protein Concentrate, Whey Protein Isolate, Micellar Casein (from milk), Egg Albumin), Emulsifier (Soy Lecithin), Skimmed Milk Powder, Inulin (from chicory), Flavour Enhancer (Glycine), Natural & Nature-Identical Flavourings, Sweeteners (Sucralose, Acesulfame-K), Digestive Enzyme Blend (Lactase enzyme, Bromelain (from Ananas comosus), Papain (from Carica papaya)).',
     howToUse: 'Mix one serving (30g) in 250-350ml of water and consume 30 minutes after exercise. Can also be taken as a protein-rich snack between meals throughout the day.',
     storage: 'Store in a cool, dry place away from direct sunlight.',
+    featured: true,
   },
   {
     id: '6',
