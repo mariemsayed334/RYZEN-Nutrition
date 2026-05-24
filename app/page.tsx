@@ -187,6 +187,7 @@ export default function Home() {
               { name: 'Amino Acids', icon: '🧬', slug: 'amino-acids' },
               { name: 'Carbohydrates', icon: '⚡', slug: 'carbohydrates' },
               { name: 'Energy & Burn', icon: '🔥', slug: 'energy-burn' },
+              { name: 'Vitamins', icon: '💊', slug: 'vitamins' },
             ].map((category) => (
               <Link key={category.slug} href={`/category/${category.slug}`}>
                 <div className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary transition-all duration-300 h-full cursor-pointer overflow-hidden">

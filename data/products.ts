@@ -345,4 +345,5 @@ export const categories = [
   { id: 'amino-acids', name: 'Amino Acids', description: 'Creatine Monohydrate and EAA Plus' },
   { id: 'carbohydrates', name: 'Carbohydrates', description: 'Cream of Rice and Fuel' },
   { id: 'energy-burn', name: 'Energy & Burn', description: 'Legend Pre Workout, Evo Burn, and Pump' },
+  { id: 'vitamins', name: 'Vitamins', description: 'Daily health, immunity, and wellness support' },
 ];
