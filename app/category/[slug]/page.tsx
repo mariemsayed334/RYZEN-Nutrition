@@ -2,6 +2,7 @@
 
 import { ProductCard } from '@/components/product-card';
 import { products, categories } from '@/data/products';
+import { slugify } from '@/lib/utils';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { useParams } from 'next/navigation';
@@ -11,7 +12,7 @@ export default function CategoryPage() {
   const slug = params.slug as string;
 
   const category = categories.find((c) => c.id === slug);
-  const categoryProducts = products.filter((p) => p.category === slug);
+  const categoryProducts = products.filter((p) => slugify(p.category) === slug);
 
   if (!category) {
     return (
