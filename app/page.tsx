@@ -69,12 +69,12 @@ export default function Home() {
             </div>
 
             {/* Right Image */}
-            <div className="order-1 lg:order-2 relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden rounded-3xl">
+            <div className="order-1 lg:order-2 relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden rounded-3xl bg-slate-950/5">
               <Image
                 src="/images/ryzen%20all.jpg"
                 alt="Ryzen Nutrition all supplements"
                 fill
-                className="object-cover"
+                className="object-contain object-center"
               />
             </div>
           </div>
