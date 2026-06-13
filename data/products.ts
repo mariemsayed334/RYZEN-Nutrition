@@ -152,13 +152,13 @@ export const products: Product[] = [
     flavors: [
       {
         id: 'f6-1',
-        name: '',
-        image: '',
+        name: 'ICY BLUE RASPBERRY',
+        image: '/images/creatine complex blue.png',
       },
       {
         id: 'f6-2',
-        name: '',
-        image: '',
+        name: 'STRAWBERRY',
+        image: '/images/creatine complex st.png',
       },
     ],
     keyBenefits: ['Improves strength and energy production during high-intensity resistance training.', 'Enhances muscle exercise capacity and endurance.', 'Promotes recovery after intense training.', 'Supports cognitive performance including memory and reduction of mental fatigue.', 'B Vitamin complex contributes to normal energy-yielding metabolism.',],
@@ -328,10 +328,14 @@ export const products: Product[] = [
     flavors: [
       {
         id: 'f14-1',
-        name: '',
-        image: '',
+        name: 'ICY BLUE RASPBERRY',
+        image: '/images/testosterone.png',
       },
-      
+      {
+        id: 'f14-2',
+        name: 'COLA',
+        image: '/images/testosterone 2.png',
+      }
     ],
    keyBenefits: ['Zinc contributes to normal testosterone levels in the blood.', 'Vitamin B6 contributes to the regulation of hormonal activity.', 'Nicotinamide and Vitamin B6 support normal energy-yielding metabolism and help reduce tiredness and fatigue.', 'Tribulus terrestris, Maca Root, and Siberian Ginseng support athletic performance and hormonal balance.'],
     howToUse: 'Mix one serving (9g) with 250ml of cold water and take it between meals. Do not exceed the recommended daily dose. Not recommended for individuals under 18 years of age. Consult your healthcare professional before use.',
