@@ -30,7 +30,7 @@ export const products: Product[] = [
       {
         id: 'f1-1',
         name: 'Blueberry',
-        image: '',
+        image: '/images/ryzen mass gainer.png',
 
       },
       {
