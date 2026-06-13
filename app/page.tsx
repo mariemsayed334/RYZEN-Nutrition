@@ -2,9 +2,9 @@
 
 import { ProductCard } from '@/components/product-card';
 import { products } from '@/data/products';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Zap, Flame, Activity, Target } from 'lucide-react';
-import { useState } from 'react';
 
 export default function Home() {
   const featuredProducts = products.filter(p => p.featured).slice(0, 4);
@@ -69,15 +69,13 @@ export default function Home() {
             </div>
 
             {/* Right Image */}
-            <div className="order-1 lg:order-2 relative h-96 sm:h-[500px] lg:h-[600px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-3xl" />
-              <div className="absolute inset-2 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl border-2 border-primary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Zap className="w-24 h-24 text-primary mx-auto mb-4 animate-pulse" />
-                  <p className="text-xl font-bold text-foreground">Ultimate Performance</p>
-                  <p className="text-muted-foreground mt-2">Premium Nutrition</p>
-                </div>
-              </div>
+            <div className="order-1 lg:order-2 relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden rounded-3xl">
+              <Image
+                src="/images/ryzen%20all.jpg"
+                alt="Ryzen Nutrition all supplements"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
