@@ -2,7 +2,7 @@
 
 import { products } from '@/data/products';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Check, AlertCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import { slugify } from '@/lib/utils';
@@ -14,6 +14,7 @@ export default function ProductPage() {
   
   const product = products.find((p) => slugify(p.slug) === slugify(slug));
   const [selectedFlavor, setSelectedFlavor] = useState(product?.flavors[0]);
+  const [selectedImageSide, setSelectedImageSide] = useState<'front' | 'back'>('front');
 
   if (!product) {
     return (
@@ -44,13 +45,32 @@ export default function ProductPage() {
           {/* Images */}
           <div>
             <div className="sticky top-32">
-              <div className="bg-gradient-to-br from-muted to-muted/50 rounded-3xl overflow-hidden mb-6 aspect-square flex items-center justify-center border border-border p-4">
+              <div className="relative bg-gradient-to-br from-muted to-muted/50 rounded-3xl overflow-hidden mb-6 aspect-square flex items-center justify-center border border-border p-4">
                 {(selectedFlavor?.image || product.images?.front) && (
                   <img
-                    src={selectedFlavor?.image ?? product.images?.front}
+                    src={selectedFlavor?.image ?? (selectedImageSide === 'front' ? product.images?.front : product.images?.back)}
                     alt={selectedFlavor?.name ?? product.name}
                     className="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105"
                   />
+                )}
+
+                {product.images?.front && product.images?.back && (
+                  <div className="absolute inset-x-0 bottom-4 flex justify-between px-4">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImageSide('front')}
+                      className={`rounded-full bg-black/50 p-3 text-white transition ${selectedImageSide === 'front' ? 'ring-2 ring-primary' : 'hover:bg-black/70'}`}
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImageSide('back')}
+                      className={`rounded-full bg-black/50 p-3 text-white transition ${selectedImageSide === 'back' ? 'ring-2 ring-primary' : 'hover:bg-black/70'}`}
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
                 )}
               </div>
 
