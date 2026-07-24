@@ -45,38 +45,39 @@ export default function ProductPage() {
           <div>
             <div className="sticky top-32">
               <div className="bg-gradient-to-br from-muted to-muted/50 rounded-3xl overflow-hidden mb-6 aspect-square flex items-center justify-center border border-border p-4">
-                {selectedFlavor?.image && (
+                {(selectedFlavor?.image || product.images?.front) && (
                   <img
-                    src={selectedFlavor.image}
-                    alt={selectedFlavor.name}
+                    src={selectedFlavor?.image ?? product.images?.front}
+                    alt={selectedFlavor?.name ?? product.name}
                     className="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105"
                   />
                 )}
               </div>
 
-              {/* Flavor Selector */}
-              <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">
-                  Available Flavors
-                </h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {product.flavors.map((flavor) => (
-                    <button
-                      key={flavor.id}
-                      onClick={() => setSelectedFlavor(flavor)}
-                      className={`p-4 rounded-lg border-2 transition-all ${
-                        selectedFlavor?.id === flavor.id
-                          ? 'border-primary bg-primary/10'
-                          : 'border-border hover:border-primary'
-                      }`}
-                    >
-                      <div className="font-bold text-sm text-foreground text-center">
-                        {flavor.name}
-                      </div>
-                    </button>
-                  ))}
+              {product.flavors.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">
+                    Available Flavors
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {product.flavors.map((flavor) => (
+                      <button
+                        key={flavor.id}
+                        onClick={() => setSelectedFlavor(flavor)}
+                        className={`p-4 rounded-lg border-2 transition-all ${
+                          selectedFlavor?.id === flavor.id
+                            ? 'border-primary bg-primary/10'
+                            : 'border-border hover:border-primary'
+                        }`}
+                      >
+                        <div className="font-bold text-sm text-foreground text-center">
+                          {flavor.name}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
 

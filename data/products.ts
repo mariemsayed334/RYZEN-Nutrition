@@ -37,18 +37,7 @@ export const products: Product[] = [
      front: '/images/ryzen-mass-gainer.png',
       back: '/images/ryzen-mass-gainer2.png',
     }, 
-    flavors: [
-      {
-        id: 'f1-1',
-        name: 'CHOCOLATE MILKSHAKE',
-        image: '/images/ryzen-mass-gainer.png',
-      },
-      {
-        id: 'f1-2',
-        name: 'BANANA MILKSHAKE',
-        image: '/images/ryzen-mass-gainer2.png',
-      },
-    ],
+    flavors: [],
     keyBenefits: ['Supports solid weight gain and lean muscle mass.', 'Provides a convenient source of quality nutrients for muscle building.', 'High protein and clean carb blend ideal for hard gainers and athletes.', 'Boosts strength and endurance naturally.'],
     howToUse: 'Mix 2 scoops (100g) with 300-400ml of cold water or milk. Blend well using a blender or shaker cup until the powder is fully dissolved. Enjoy before or after workouts for optimal results.',
     ingredients: 'Protein Blend (Whey Protein Concentrate, Whey Protein Isolate, Milk Protein), Carbohydrate Blend (Maltodextrin, Oat Flour, Whey Maize Starch), BCAA (L-Leucine, L-Isoleucine, L-Valine), L-Glutamine, Creatine Monohydrate, Taurine, Vitamin & Mineral Complex, Natural and Artificial Flavors, Thickening Agents (Xanthan Gum, Guar Gum), Sweeteners (Sucralose, Acesulfame K), Anti-Caking Agent (Silicon Dioxide).',

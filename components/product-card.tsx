@@ -26,9 +26,9 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Image Container */}
       <div className="relative min-h-[280px] h-72 sm:h-80 bg-gradient-to-br from-muted/80 to-muted overflow-hidden">
-        {product.flavors[0]?.image && (
+        {(product.flavors[0]?.image || product.images?.front) && (
           <img
-            src={product.flavors[0].image}
+            src={product.flavors[0]?.image ?? product.images?.front}
             alt={product.name}
             className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
           />
