@@ -258,14 +258,10 @@ export const products: Product[] = [
     flavors: [
       {
         id: 'f11-1',
-        name: 'CHOCOLATE MILKSHAKE',
-        image: '/images/iso.png',
+        name: 'BUBBLEGUM',
+        image: '/images/eAA1.png',
       },
-      {
-        id: 'f11-2',
-        name: 'COOKIES N CREAM',
-        image: '/images/iso 2.png',
-      },
+      
     ],
    keyBenefits: ['Provides all 9 Essential Amino Acids in a premium quality, highly bioavailable form.', ' Supports muscle protein synthesis, tissue growth and repair.', 'Aids neurotransmission, glucose uptake, immune function, enzyme production, and oxygen delivery.', 'Can be used intra-workout or between meals to maintain amino acid levels throughout the day.'],
     howToUse: 'Mix one serving (13g) with 250ml of cold water. For best results, consume before, during, or after your workout. Can also be taken between meals to support amino acid levels throughout the day.',
@@ -292,15 +288,15 @@ export const products: Product[] = [
   },
   {
     id: '13',
-    slug: 'Multi Vitamins Hit Pack',
-    name: 'Multi Vitamins Hit Pack',
+    slug: 'Power Pack',
+    name: 'Power Pack',
     category: 'Vitamins',
-    description: 'RYZEN Nutrition Multi Vitamins HIT Pack – Comprehensive Daily Health Complex. Each pack contains a complete blend of vitamins, minerals, omega-3 fatty acids, lecithin, and Coenzyme Q10. Net quantity: 30 packs (30-day supply).',
+    description: 'RYZEN Nutrition Power Pack – Comprehensive Daily Health Complex. Each pack contains a complete blend of vitamins, minerals, omega-3 fatty acids, lecithin, and Coenzyme Q10. Net quantity: 30 packs (30-day supply).',
     flavors: [
       {
         id: 'f13-1',
         name: '',
-        image: '',
+        image: '/images/power.png.png',
       },
     ],
    keyBenefits: ['Comprehensive daily supplement covering vitamins, minerals, omega-3 fatty acids, lecithin, and CoQ10 in one convenient pack.', 'Evidence-backed, clinically dosed components for health, wellbeing, and vitality.', 'Supports energy metabolism, immune function, and cardiovascular health.', 'Ideal for active individuals and athletes seeking complete daily nutritional support.'],

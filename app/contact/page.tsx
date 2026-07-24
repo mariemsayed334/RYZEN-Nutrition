@@ -40,23 +40,18 @@ export default function ContactPage() {
           <div className="lg:col-span-1">
             <div className="space-y-8">
               {[
-                {
-                  icon: Mail,
-                  title: 'Email',
-                  value: 'support@ryzen.com',
-                  description: 'We reply within 24 hours',
-                },
+                
                 {
                   icon: Phone,
                   title: 'Phone',
-                  value: '+1 (555) 123-4567',
+                  value: '+49 157 71515938',
                   description: 'Mon-Fri 9am-6pm EST',
                 },
                 {
                   icon: MapPin,
                   title: 'Address',
-                  value: 'Los Angeles, CA',
-                  description: 'United States',
+                  value: 'Rückertstraße 12',
+                  description: '22089 Hamburg',
                 },
               ].map((item, idx) => {
                 const Icon = item.icon;
