@@ -34,8 +34,8 @@ export const products: Product[] = [
     category: 'Protein',
     description: 'RYZEN Nutrition Mass Gainer – Premium Protein & Clean Carb Blend. Available in Chocolate Milkshake and Banana Milkshake flavors. Each serving (100g / 2 scoops) delivers 30g of protein. Net weight: 6kg, 60 servings.',
     images:{
-     front: '/images/mass gainer.png',
-      back: '/images/mass gainer2.png',
+     front: '/images/ryzen mass gainer.png',
+      back: '/images/ryzen mass gainer2.png',
     }, 
     flavors: [
     ],
