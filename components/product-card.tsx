@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Star } from 'lucide-react';
+import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Product } from '@/data/products';
 import { slugify } from '@/lib/utils';
 import { useState } from 'react';
@@ -11,6 +11,12 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const [selectedImageSide, setSelectedImageSide] = useState<'front' | 'back'>('front');
+  const imageSrc =
+    product.images?.[selectedImageSide] ??
+    product.images?.front ??
+    product.flavors[0]?.image;
+
   return (
     <div className="group relative bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-500 h-full flex flex-col shadow-lg hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-3">
       <Link
@@ -26,13 +32,41 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Image Container */}
       <div className="relative min-h-[280px] h-72 sm:h-80 bg-gradient-to-br from-muted/80 to-muted overflow-hidden">
-        {(product.flavors[0]?.image || product.images?.front) && (
+        {imageSrc && (
           <img
-            src={product.flavors[0]?.image ?? product.images?.front}
+            src={imageSrc}
             alt={product.name}
             className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
           />
         )}
+
+        {product.images?.front && product.images?.back && (
+          <>
+            <button
+              type="button"
+              aria-label="Show front image"
+              onClick={(event) => {
+                event.stopPropagation();
+                setSelectedImageSide('front');
+              }}
+              className="absolute left-3 top-1/2 z-50 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <ArrowLeft className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              aria-label="Show back image"
+              onClick={(event) => {
+                event.stopPropagation();
+                setSelectedImageSide('back');
+              }}
+              className="absolute right-3 top-1/2 z-50 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </>
+        )}
+
         {product.featured && (
           <div className="absolute top-4 right-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-primary/50 animate-pulse">
             FEATURED

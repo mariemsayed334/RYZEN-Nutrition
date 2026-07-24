@@ -116,7 +116,7 @@ export default function AboutPage() {
             href="/shop"
             className="group inline-flex items-center justify-center bg-primary hover:bg-accent text-primary-foreground px-8 py-4 rounded-lg font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:-translate-y-1"
           >
-            Shop Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Shop Now <ArrowRight className="ml-2 w-5 h-5 align-middle group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

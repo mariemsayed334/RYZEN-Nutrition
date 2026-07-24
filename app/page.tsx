@@ -43,7 +43,7 @@ export default function Home() {
                   href="/shop"
                   className="group inline-flex items-center justify-center bg-primary hover:bg-accent text-primary-foreground px-8 py-4 rounded-lg font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:-translate-y-1"
                 >
-                  Shop Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  Shop Now <ArrowRight className="ml-2 w-5 h-5 align-middle group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/about"
@@ -159,7 +159,7 @@ export default function Home() {
               href="/shop"
               className="group flex items-center gap-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-black px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all hover:-translate-y-1 uppercase tracking-wider text-sm"
             >
-              View All <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              View All <ArrowRight className="w-5 h-5 align-middle group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -196,7 +196,7 @@ export default function Home() {
                       {category.name}
                     </h3>
                     <p className="text-muted-foreground flex items-center gap-1 group-hover:text-foreground transition-colors">
-                      Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      Explore <ArrowRight className="w-4 h-4 align-middle group-hover:translate-x-1 transition-transform" />
                     </p>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export default function Home() {
             href="/shop"
             className="group inline-flex items-center justify-center bg-primary hover:bg-accent text-primary-foreground px-10 py-4 rounded-lg font-bold uppercase tracking-wider text-base transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:-translate-y-1"
           >
-            Start Your Journey <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Start Your Journey <ArrowRight className="ml-2 w-5 h-5 align-middle group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>
